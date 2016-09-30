@@ -27,10 +27,10 @@
 <h2 id="discussion">02-Discussion</h2>
 <h3 id="bash">2.1 Bash</h3>
 <p>In the first part of this project, I need to start with creating a file structure for me to work in. This is where Bash steps in. Bash is Unix shell and command language that typically runs in a text window, where allow me to type commands that cause actions. The ‘shell’ is essential the interface which allows me to interact with the ‘kernel’ which does the actual computing. Bash can also read commands from file, while in this project, I work through the terminal, and with bash commands, I can create the file structure needed for this project.</p>
-<p>Typing <code>mkdir</code> followed by a directory name creates a directory. As there is more than one directory, the <code>cd</code> command allows you to move between directories. <code>cd</code> alone gets you to the home directory. <code>cd dir</code> gets you into a subdirectory. <code>cd..</code> moves you up a directory. <code>cd</code> can be also used with relative and absolute paths with <code>cd</code>.</p>
-<p>Once all the required directories are sorted out, using <code>touch FILE…</code> to create all of the text files needed. Then, I use MacVim to edit all of the text files, including all the markdown files, the README, the Makefile and the gitignore. Just type <code>vim FILENAME</code> in the terminal window and then hit <code>i</code>, then you can start editing the text file. When you stop, hit<code>esc</code> and then type <code>:wq</code> allows you to save the content and exit vim.</p>
+<p>Typing <code>mkdir</code> followed by a directory name creates a directory. As there is more than one directory, the <code>cd</code> command allows you to move between directories. <code>cd</code> alone gets you to the home directory. <code>cd dir</code> gets you into a subdirectory. <code>cd..</code> moves you up a directory. <code>cd</code> can be also used with relative and absolute paths.</p>
+<p>Once all the required directories are sorted out, using <code>touch Filename</code> to create all of the text files needed. Then, I use MacVim to edit all of the text files, including all the markdown files, the README, the Makefile and the gitignore. Just type <code>vim FILENAME</code> in the terminal window and then hit <code>i</code>, then you can start editing the text file. When you stop, hit<code>esc</code> and then type <code>:wq</code> allows you to save the content and exit vim.</p>
 <p>In project 1, vim is useful because it is easy to call up through bash, easy to type in and edit plain text, and works fine with different document formats. However, it is kind of annoying to work with long reports, like what I am doing now. So, I used sublime instead and then simply copied into vim when I wanted to save changes.</p>
-<p>Moving<code>mv [options] source dest</code>, deleting<code>rm [option]…FILE…</code>, and concatenating <code>cat FILES… &gt; FILE…</code> files are also useful bash commands for this project, especially if you accidentally put the files under the wrong directory or need to move local images files into the specific directory.</p>
+<p>Moving<code>mv [options] source destination</code>, deleting<code>rm [option] FILE</code>, and concatenating <code>cat FILES &gt; FIL2</code> files are also useful bash commands for this project, especially if you accidentally put the files under the wrong directory or need to move local images files into the specific directory.</p>
 <p>The final structure build opon bash commands is like:</p>
 <pre><code>stat159-fall2016-project1/
     .gitignore
@@ -50,7 +50,7 @@
         markdown-logo.png
         pandoc-logo.png
         stat159-logo.png</code></pre>
-<p>As the bash commands are simple to call and easy to use, I build such a structure straightforward and quick. Such structure took me less than one hour to make.</p>
+<p>As the bash commands are simple to call and easy to use, I build such a structure straightforwardly and quickly. Such structure took me less than one hour to make, and I did not need help from others in this part.</p>
 <h3 id="markdown">2.2 Markdown</h3>
 <div class="figure">
 <img src="https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/markdown-logo.png" />
@@ -59,7 +59,7 @@
 <p>Markdown is a lightweight markup language, has a very simple syntax and works well with many basic text editors. Generally, Markdown allows people to write using an easy-to-read, easy-to-write and good looking plain text format, and then converts it to many structurally valid document formats.</p>
 <p>Some useful syntax that I used for my project 1 shown below:<br />
 1.Putting a <code>#</code> before a phrase will make it a header. Adding more and more <code>#</code> makes the header smaller and smaller.<br />
-2.<code>*</code> can be used for listing bullet points.<br />
+2.<code>*</code> and <code>-</code> can be used for listing bullet points.<br />
 3.Emphasis<br />
 a.Italics, with <code>*something*</code> or <code>_something_</code>;<br />
 b.bold, with <code>**something**</code> or <code>__somthing__</code>;<br />
@@ -77,7 +77,7 @@ b.bold, with <code>**something**</code> or <code>__somthing__</code>;<br />
 <p>Before you complete a project, the project is a living creature that keeps evolving; it is necessary to keep track of changes. This is where Git steps in. Git is a type of version control system that records changes to a file or set of files over time so that you can recall specific versions later. It allows you to revert files back to a previous state, revert the entire project back to a previous state, compare changes over time, see who last modified something that might be causing a problem, who introduced an issue and when, and more. Using Git also generally means that if you screw things up or lose files, you can easily recover.</p>
 <p>Git is very easy to call and use, there are a few very useful commands for me to track changes locally:<br />
 * First of all, I need to initiate Git in my root directory, by typing bash command <code>git init</code>.<br />
-* After I edit a file or make some changes in the directory, I can use the commands <code>git add FILE…</code>, <code>git commit –m “message”</code> to add files changed into tracking and also add a message to title the commit.<br />
+* After I edit a file or make some changes in the directory, I can use the commands <code>git add FILENAME</code>, <code>git commit –m “message”</code> to add files changed into tracking and also add a message to title the commit.<br />
 * Moreover, <code>git status</code> is very useful for checking if I miss some changes untracked or if I made an error.<br />
 * Finally, <code>git log</code> can show me the project history.</p>
 <h3 id="github">2.3 GitHub</h3>
@@ -85,23 +85,37 @@ b.bold, with <code>**something**</code> or <code>__somthing__</code>;<br />
 <img src="https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/github-logo.png" />
 
 </div>
-<p>Using Git locally on your own computer if you are working alone. However, what if your computer face some issues or what if you need collaboration when doing a project? In these situation, a remote repository on the we becomes very necessary, and this is where GitHub steps in. GitHub is a hosting service created specifically for Git which allows groups of contributor to work on a remote repositories. GitHub users can connect a local repository to a GitHub repository and <code>push</code> content from their own local repository to GitHub and <code>pull</code> content from GitHub to their local repository. To do this, you only need to create a GitHub repository with the same name as the root directory, in this case, <code>stat159-fall2016-project1</code>. (To be noticed, you need to set up an account on Github before you doing this.)To connect to the remote and local repository, you use the command <code>git remote add origin url</code>, <code>git remote –v</code> and <code>git push –u origin master</code>. After the connection, you can always use <code>git push –u origin master</code> to update the remote repository according to the local one.</p>
-<p>I really like this part of the project that I can back up my work on a remote repository with those easy and quick bash commands. Whenever push the content from my local repository to GitHub, it is existing to double check my GitHub repository. It is a feeling of guarantee and content!</p>
+<p>Using Git locally on your own computer is fine if you are working alone. However, what if your computer face some issues or what if you need collaboration when doing a project? In these situation, a remote repository on the web becomes very necessary, and this is where GitHub steps in. GitHub is a hosting service created specifically for Git which allows groups of contributor to work on a remote repositories. GitHub users can connect a local repository to a GitHub repository and <code>push</code> content from their own local repository to GitHub and <code>pull</code> content from GitHub to their local repository. To do this, you only need to create a GitHub repository with the same name as the root directory, in this case, <code>stat159-fall2016-project1</code>. (To be noticed, you need to set up an account on Github before you doing this.) To connect to the remote and local repository, you use the command <code>git remote add origin url</code>, <code>git remote –v</code> and <code>git push –u origin master</code>. After the connection, you can always use <code>git push –u origin master</code> to update the remote repository according to the local one.</p>
+<p>I really like this part of the project that I can back up my work on a remote repository with those easy and quick bash commands. It is necessary to remember important commands, so you do not need to look them up all the time. Whenever pushing the content from my local repository to GitHub, it is existing to double check my GitHub repository. It is a feeling of guarantee and content!</p>
 <h3 id="gnu-make">2.4 GNU Make</h3>
 <p>After I finish type up each section in the project, I need to think about wrap things up and generate a final product. I need to use GNU Make and Pandoc to accomplish this, while I am going to talk about GNU Make first.</p>
 <p>GNU Make is a build automation tool which controls the generation of executable and other non-source files of a program from the program's source files Simply, Make allows us to define our own command <code>make</code> through a text file called <code>Makefile</code>, and <code>make</code> is able to do many different things based on what you put in the Makefile. In project 1, I am using Make to concatenate the sections of the reports together into <code>paper.md</code> and then convert it to <code>paper.html</code>. The second step needs Pandoc, which I will talk later.</p>
 <p>My Makefile is formed with rules shown below:</p>
-<pre><code>.PHONY: all clean
+<pre><code>#Phony targets
+.PHONY: all clean
+
+#all
 all: paper.md paper.html
+
+#wrap up files, convert to html
 paper.md: paper/sections/*.md
     cd paper/sections; cat *.md &gt; paper.md
-    cd paper/sections; mv paper.md ../  paper.html: paper/paper.md
-    cd paper; pandoc paper.md -s -o paper.html
+    cd paper/sections; mv paper.md ../
+
+paper.html: paper/paper.md
+    pandoc paper/paper.md -s -o paper.html
+    mv paper.html paper/paper.html
+
+#clean output files
 clean:
-    rm -f paper.html paper.md </code></pre>
-<p><code>paper.md</code> and <code>paper.html</code> are my target file and <code>paper/sections/*.md</code> and <code>paper/paper.md</code> are my dependencies. A target file is a file that needs to be made and a dependency is an existing file that I want to use to build the target. To be noticed, the recipe lines must be indented with a TAB instead of space. Terminal returned errors, when I accidentally used space. With the correct code, when I run Make, I can see the generated output file paper.html. Additionally, I also have a clean target that is used for remove paper.html and paper.md from testing, before I get the final product I want. Just, type <code>make clean</code>, I can remove the all the output files from testing. GNU is great that it automates the action of wrapping, document converting and also the testing process. This saves me a lot of time and also allows me to execute those actions when necessary.</p>
+    cd paper; rm -f paper.html paper.md </code></pre>
+<p><code>paper.md</code> and <code>paper.html</code> are my target files and <code>paper/sections/*.md</code> and <code>paper.md</code> are my dependencies. A target file is a file that needs to be made and a dependency is an existing file that I want to use to build the target. To be noticed, the recipe lines must be indented with a TAB instead of space. Terminal returned errors, when I accidentally used space. With the correct code, when I run Make, I can see the generated output file paper.html. Additionally, I also have a clean target that is used for remove paper.html and paper.md from testing, before I get the final product I want. Just, type <code>make clean</code>, I can remove the all the output files from testing. GNU Make is great that it automates the action of wrapping, document converting and also the testing process. This saves me a lot of time and also allows me to execute those actions only when necessary. I think it is the hardest part in this project that I had errors several time, like confused about the paths, and asked GSI in the section to correct them.</p>
 <h3 id="pandoc">2.5 Pandoc</h3>
-<p><img src="https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/pandoc-logo.png" /> Pandoc is a universal document converter that converts files from one markup format into another. Pandoc is a command-line tool, so there is no graphic user interface. Thus, I need to open a terminal window to use it. In Project 1, I want to convert <code>paper.md</code> to <code>paper.html</code>. As the I need to test several times to get the final product, I put the command <code>pandoc paper.md –s –o paper.html</code> in Makefile to reduce the time of unnecessary recompiling. The –s option says to create a file, with header and footer, not just a fragment. And the –o test.html says to put the output in the file. If the code works, typing <code>ls paper</code> in the terminal window, then I should see <code>paper.html</code>.</p>
-<p>Pandoc is great, not only it is free and can universally converting one markup format to another, but also, Pandoc understands a number of useful markdown syntax extensions that including footnotes, tables, flexible ordered lists, definition lists, fenced code blocks, superscripts and subscripts and citations. Working with Pandoc allows us to do academic writing in plain text that makes writing easy to write and edit.</p>
+<div class="figure">
+<img src="https://raw.githubusercontent.com/ucb-stat159/stat159-fall-2016/master/projects/proj01/images/pandoc-logo.png" />
+
+</div>
+<p>Pandoc is a universal document converter that converts files from one markup format into another. Pandoc is a command-line tool, so there is no graphic user interface. Thus, I need to open a terminal window to use it. In Project 1, I want to convert <code>paper.md</code> to <code>paper.html</code>. As the I need to test several times to get the final product, I put the command <code>pandoc paper.md –s –o paper.html</code> in Makefile to reduce the time of unnecessary recompiling. The –s option says to create a file, with header and footer, not just a fragment. And the –o test.html says to put the output in the file. If the code works, typing <code>ls paper</code> in the terminal window, then I should see <code>paper.html</code>after I run the Makefile.</p>
+<p>Pandoc is great, not only it is free, very easy to use (just one line command!) ,and can universally converting one markup format to another, but also, Pandoc understands a number of useful markdown syntax extensions that including footnotes, tables, flexible ordered lists, definition lists, fenced code blocks, superscripts and subscripts and citations. So when I converting the markdown file with Pandoc, I can keep the formating that I spent hours to make in the html document. Working with Pandoc allows us to do academic writing in plain text that makes writing easy to write and edit, but still good-looking.</p>
 </body>
 </html>
