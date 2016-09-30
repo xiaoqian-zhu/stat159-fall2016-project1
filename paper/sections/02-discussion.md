@@ -1,6 +1,5 @@
 ##02-Discussion  
 
----
 
 ###2.1 Bash
 In the first part of this project, I need to start with creating a file structure for me to work in. This is where Bash steps in. Bash is Unix shell and command language that typically runs in a text window, where allow me to type commands that cause actions. The ‘shell’ is essential the interface which allows me to interact with the ‘kernel’ which does the actual computing. Bash can also read commands from file, while in this project, I work through the terminal, and with bash commands, I can create the file structure needed for this project.
@@ -102,3 +101,4 @@ Pandoc is a universal document converter that converts files from one markup for
 
 Pandoc is great, not only it is free and can universally converting one markup format to another, but also, Pandoc understands a number of useful markdown syntax extensions that including footnotes, tables, flexible ordered lists, definition lists, fenced code blocks, superscripts and subscripts and citations. Working with Pandoc allows us to do academic writing in plain text that makes writing easy to write and edit. 
 
+---
