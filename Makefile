@@ -1,18 +1,18 @@
-# from markdown to html
-paper/paper.html: paper/paper.md
-	pandoc paper/paper.md -s -o paper/paper.html
-
-# phony targets
+#Phony targets
 .PHONY: all clean
 
-# all
-all: paper/paper.html
+#all
+all: paper.md paper.html
 
+#wrap up files, convert to html
+paper.md: paper/sections/*.md
+	cat paper/sections/*.md > paper.md
+	mv paper/sections/paper.md ../
 
-# from markdown to html
-paper/paper.html: paper/paper.md
-	pandoc paper/paper.md -s -o paper/paper.html
+paper.html: paper/paper.md
+	pandoc paper.md -s -o paper.html
 
-# remove output files
+#clean output files
 clean:
-	rm -f paper/paper.html
+	rm -f paper.html paper.md 
+
