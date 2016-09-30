@@ -5,7 +5,7 @@
 ##Description
 
 
-This project is a report describing the tools used create it, including Bash, Markdown, GNU Make, Git, GitHub, Pandoc and MacVim. Inside the paper folder, we have the final paper, `paper.md` and `paper.html`, and sections folder, which contains the markdown files for each main section of this report. The final paper is generated via Makefile, which is in the root directory. The generating process can be repeated by using `make clean` and `make'. We also have images folder for all pngs for logos of tools used in this project.
+This project is a report describing the tools used create it, including Bash, Markdown, GNU Make, Git, GitHub, Pandoc and MacVim. Inside the paper folder, we have the final paper, `paper.md` and `paper.html`, and sections folder, which contains the markdown files for each main section of this report. The final paper is generated via `Makefile`, which is in the root directory. The generating process can be repeated by using `make clean` and `make`. We also have images folder for all pngs for logos of tools used in this project.
 
 ##License
 
